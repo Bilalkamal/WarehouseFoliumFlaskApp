@@ -1,0 +1,11 @@
+warehouse_id,facility_name,combined_operator_id,operator_tier,operator_account_status,addr_line_1,addr_line_2,addr_line_3,city,state,zip_code,zip_wms,country_wms,latitude_sf,longitude_sf,lonlat_lat_wms,lonlat_lon_wms,state_latitude,state_longitude,facility_full_address,warehouse_tier_sf
+3732,warehouse 1,4523,Tier 3,,951 Monster Road Southwest,,,Renton,WA,98057,98057,US,47.43524,-122.24526,47.471703,-122.243605,47.751074,-120.740139,"951 Monster Road Southwest, Renton, WA 98057",Tier 3
+2771,warehouse 2,3471,Tier 2,,1242 S River Rd,,,Cranbury,NJ,8512,8512,US,40.3273289,-74.4970063,40.333327,-74.490348,40.058324,-74.405661,"1242 S River Rd, Cranbury, NJ 08512",Tier 2
+3653,warehouse 3,3026,Unknown,,1564 Firestone Parkway,,,Akron,OH,44301,44301,US,41.04436,-81.53228,41.044864,-81.533091,40.417287,-82.907123,"1564 Firestone Parkway, Akron, OH 44301",Tier 2
+3659,warehouse 4,1690,Tier 3,,4259 South 500 East,,,Whitestown,IN,46075,46075,US,39.9816191,-86.3750049,39.977126,-86.372476,40.551217,-85.602364,"4259 South 500 East, Whitestown, IN 46075",Tier 2
+3543,warehouse 5,4388,Tier 2,,3051 Lakeview Road,,,Lawrence,KS,66049,66049,US,38.99663,-95.27228,38.994944,-95.270714,39.011902,-98.484246,"3051 Lakeview Road, Lawrence, KS 66049",Tier 1
+3628,warehouse 6,186,Tier 3,,1150 Arbor Avenue,Ste 103,,Tracy,CA,95376,95376,US,37.76907,-121.42038,37.766988,-121.410089,36.778261,-119.417932,"1150 Arbor Avenue, Tracy, CA 95376",Tier 2
+3884,warehouse 7,2740,Tier 2,,10 Jupiter Lane,,,Colonie,NY,12205,12205,US,42.71733,-73.84005,42.717362,-73.839851,43.299428,-74.217933,"10 Jupiter Lane, Colonie, NY 12205",
+3210,warehouse 8,4012,Tier 3,,3146 South Chestnut Avenue,,,Fresno,CA,93725,93725,US,36.68981,-119.7339,36.69041,-119.73617,36.778261,-119.417932,"3146 South Chestnut Avenue, Fresno, CA 93725",Tier 2
+3399,warehouse 9,4012,Tier 3,,3400 Industrial Road,,,Harrisburg,PA,17110,17110,US,40.30484,-76.89048,40.304351,-76.888939,41.203322,-77.194525,"3400 Industrial Road, Harrisburg, PA 17110",Tier 2
+2691,warehouse 10,1875,Tier 3,,11075 East 40th Avenue,,,Denver,CO,80239,80239,US,39.77389,-104.86036,39.773889,-104.86036,39.550051,-105.782067,"11075 East 40th Avenue, Denver, CO 80239",Tier 4

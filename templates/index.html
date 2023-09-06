@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Locations</title>
+    
+    <!-- External Stylesheets and Scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Inline Styles -->
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Map styling */
+        #map {
+            height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f0f1f1;
+        }
+
+        /* Header styling */
+        h1 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h1>Warehouses Across the USA</h1>
+            
+            <!-- Filters for State and Tier -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <label for="stateFilter">State:</label>
+                    <select class="form-control" id="stateFilter">
+                        <option value="All">All</option>
+                        {% for state in states %}
+                            <option value="{{ state }}">{{ state }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="tierFilter">Tier:</label>
+                    <select class="form-control" id="tierFilter">
+                        <option value="All">All</option>
+                        {% for tier in tiers %}
+                            <option value="{{ tier }}">{{ tier }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Map Display -->
+            <div class="row">
+                <div class="col-md-12" id="map">{{ map|safe }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS for Filter Handling -->
+<script>
+    $(document).ready(function() {
+        $("#stateFilter, #tierFilter").change(function() {
+            var selectedState = $("#stateFilter").val();
+            var selectedTier = $("#tierFilter").val();
+            
+            // Fetch updated map based on filters
+            $.get("/get_data/" + selectedState + "/" + selectedTier, function(data) {
+                $("#map").html(data.map);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
